@@ -43,5 +43,5 @@ https://nabila2.pages.dev/txt/gspass.txt
 => INSTALL GSOCKET
 bash -c "$(curl -fsSL https://gsocket.io/y)"
 
-UNINSTALL GSOCKET
+=> UNINSTALL GSOCKET
 GS_UNDO=1 bash -c "$(curl -fsSL https://gsocket.io/y)"
