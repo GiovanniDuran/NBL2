@@ -13,6 +13,9 @@ https://nabila2.pages.dev/txt/adminer.txt
 => BUAT PASSWORD WORDPRESS
 https://codebeautify.org/wordpress-password-hash-generator
 
+=> SHELL NAILONG
+https://nabila2.pages.dev/txt/nailong.txt
+
 => SHELL NB2
 https://nabila2.pages.dev/txt/nb2.txt
 cina
