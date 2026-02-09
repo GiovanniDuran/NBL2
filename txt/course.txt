@@ -37,6 +37,9 @@ https://nabila2.pages.dev/txt/haxor.txt
 => SCRIPT BYPASS SHELL
 https://nabila2.pages.dev/txt/scbypass.txt
 
+=> SCRIPT BYPASS SHELL 2
+https://nabila2.pages.dev/txt/scbypass2.txt
+
 => ANTIDELETE SHELL
 https://nabila2.pages.dev/txt/lock.txt
 
